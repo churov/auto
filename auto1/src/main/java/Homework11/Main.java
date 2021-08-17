@@ -15,7 +15,8 @@ public class Main {
 
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\anduser\\IdeaProjects\\auto\\auto1\\src\\main\\resources\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\anduser\\IdeaProjects\\auto\\auto1\\src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\IdeaProjects\\auto\\auto1\\src\\main\\resources\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://crm.geekbrains.space/user/login");
         //WebElement header =driver.findElement(By.id("header"));
@@ -48,7 +49,7 @@ public class Main {
         Select select3 = new Select(driver.findElement(By.xpath("//select[@name='crm_project[manager]']")));
         select3.selectByValue("8");
         Thread.sleep(2000);
-        driver.findElement(By.className("btn btn-success action-button")).click();
-
+        //driver.findElement(By.xpath("//*[@id=\"crm_project-uid-611b5eba8457a\" and text()='Сохранить и закрыть']")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[3]/form/div[1]/div/div/div[2]/div[1]/div[4]")).click();
     }
 }
